@@ -6,7 +6,7 @@ COPY . .
 
 RUN go mod download && go mod tidy
 
-CMD ["go", "run", "."]
+CMD ["make", "live"]
 
 FROM golang:1.23.2 AS builder
 
