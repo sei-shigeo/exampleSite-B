@@ -12,17 +12,26 @@ templ Base() {
 			<title>Document</title>
 		</head>
 		<body>
-			<header id="header">
+			<header id="header" style="grid-area: h;">
 				@components.Header()
 			</header>
-			<main id="main">
+			<main id="main" style="grid-area: m;">
 				<div class="container">
 					{ children... }
 				</div>
 			</main>
-			<footer id="footer">
+			<footer id="footer" style="grid-area: f;">
 				@components.Footer()
 			</footer>
 		</body>
+		<style type="text/css">
+			body {
+				font-family: 'Roboto', sans-serif;
+				background-color: #f0f0f0;
+				display: grid;
+				grid-template-rows: auto 1fr auto;
+				grid-template-areas: "h" "m" "f";
+			}
+		</style>
 	</html>
 }

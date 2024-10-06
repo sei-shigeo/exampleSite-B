@@ -12,9 +12,10 @@ ul {
   list-style: none;
 }
 
-body {
-  font-family: 'Roboto', sans-serif;
+html {
+  scroll-behavior: smooth;
 }
+
 
 .container {
   max-width: 1200px;
