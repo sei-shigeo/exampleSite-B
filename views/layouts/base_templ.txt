@@ -1,4 +1,0 @@
-<!doctype html><html lang=\"ja\"><head><meta charset=\"UTF-8\"><meta name=\"viewport\" content=\"width=device-width, initial-scale=1.0\"><link rel=\"stylesheet\" href=\"/assets/css/style.css\"><title>Document</title></head><body><header id=\"header\" style=\"grid-area: h;\">
-</header><main id=\"main\" style=\"grid-area: m;\"><div class=\"container\">
-</div></main><footer id=\"footer\" style=\"grid-area: f;\">
-</footer></body><style type=\"text/css\">\n\t\t\tbody {\n\t\t\t\tfont-family: 'Roboto', sans-serif;\n\t\t\t\tbackground-color: #f0f0f0;\n\t\t\t\tdisplay: grid;\n\t\t\t\tgrid-template-rows: auto 1fr auto;\n\t\t\t\tgrid-template-areas: \"h\" \"m\" \"f\";\n\t\t\t}\n\t\t</style></html>

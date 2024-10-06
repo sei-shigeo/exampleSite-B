@@ -1,1 +1,0 @@
-<div class=\"container\"><small>Copyright &copy; Waseisyouji Co., Ltd. All rights reserved.</small></div><style type=\"text/css\">\n\t\t#footer {\n\t\t\tbackground-color: #f0f0f0;\n\t\t}\n\t\t#footer .container {\n\t\t\tpadding: 1rem 0;\n\t\t\ttext-align: center;\n\t\t}\n\t</style>
