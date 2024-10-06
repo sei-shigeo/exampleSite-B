@@ -8,16 +8,17 @@ templ Base() {
 		<head>
 			<meta charset="UTF-8"/>
 			<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+			<link rel="stylesheet" href="/assets/css/style.css"/>
 			<title>Document</title>
 		</head>
 		<body>
-			<header>
+			<header id="header">
 				@components.Header()
 			</header>
-			<main>
+			<main id="main">
 				{ children... }
 			</main>
-			<footer>
+			<footer id="footer">
 				@components.Footer()
 			</footer>
 		</body>

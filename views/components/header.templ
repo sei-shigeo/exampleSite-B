@@ -2,15 +2,41 @@ package components
 
 templ Header() {
 	<div class="container">
-		<a href="/" class="logo">
-			<h1>Logo</h1>
-		</a>
-		<nav class="nav">
-			<ul>
-				<li><a href="/">Home</a></li>
-				<li><a href="/about">About</a></li>
-				<li><a href="/contact">Contact</a></li>
+		<div class="header-logo">
+			<h1><a href="/" title="Go to homepage">Logo</a> </h1>
+		</div>
+		<nav class="header-nav">
+			<ul class="header-nav-list">
+				<li class="header-nav-item"><a href="/">Home</a></li>
+				<li class="header-nav-item"><a href="/about">About</a></li>
+				<li class="header-nav-item"><a href="/contact">Contact</a></li>
+				<li class="header-nav-item"><a href="/qa">Q&A</a></li>
 			</ul>
 		</nav>
 	</div>
+	<style>
+		#header {
+			background-color: #f0f0f0;
+		}
+		#header .container {
+			display: flex;
+			justify-content: space-between;
+			align-items: center;
+			padding: 1rem 0;
+		}
+		#header .header-logo {
+			& h1 {
+				font-size: 1.5rem;
+			}
+		}
+		#header .header-nav-list {
+			display: flex;
+			justify-content: space-between;
+			align-items: center;
+			gap: 1rem;
+			& a:hover {
+				color: red;
+			}
+		}
+	</style>
 }

@@ -1,13 +1,3 @@
-FROM golang:1.23.2 AS development
-
-WORKDIR /app
-
-COPY . .
-
-RUN go mod download && go mod tidy
-
-CMD ["make", "live"]
-
 FROM golang:1.23.2 AS builder
 
 WORKDIR /app

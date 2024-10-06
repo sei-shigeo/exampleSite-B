@@ -43,7 +43,7 @@ func Home() templ.Component {
 				}()
 			}
 			ctx = templ.InitializeContext(ctx)
-			_, templ_7745c5c3_Err = templ_7745c5c3_Buffer.WriteString("<h1>Home</h1>")
+			_, templ_7745c5c3_Err = templ_7745c5c3_Buffer.WriteString("<div><h1>Home</h1><p>Lorem ipsum dolor sit amet consectetur adipisicing elit.  Qui quidem praesentium quis perspiciatis nisi voluptatem optio  voluptatibus quia possimus cupiditate eveniet assumenda nam modi,  ipsam asperiores. Ex nostrum molestiae temporibus?</p></div>")
 			if templ_7745c5c3_Err != nil {
 				return templ_7745c5c3_Err
 			}
