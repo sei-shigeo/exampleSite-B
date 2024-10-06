@@ -13,5 +13,6 @@ FROM alpine:latest AS production
 WORKDIR /
 
 COPY --from=builder /app/bin/main ./main
+COPY --from=builder /app/assets ./assets
 
 CMD ["/main"]
