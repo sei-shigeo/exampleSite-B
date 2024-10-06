@@ -1,2 +1,30 @@
+# バージョン管理のメタデータ
+.git/
+
+# Goのビルド成果物
+*.exe
+*.exe~
+*.dll
+*.so
+*.dylib
+*.test
+
+# Node.jsの依存関係
+node_modules/
+
+# 環境設定ファイル
+.env
+
 # 一時ファイル(ライブリロード用)
 /tmp/
+*_templ.txt
+
+# ビルド成果物
+dist/
+build/
+
+# OSやIDEの設定ファイル
+.DS_Store
+Thumbs.db
+*.log
+*.tmp
