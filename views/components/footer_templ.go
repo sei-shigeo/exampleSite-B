@@ -29,7 +29,7 @@ func Footer() templ.Component {
 			templ_7745c5c3_Var1 = templ.NopComponent
 		}
 		ctx = templ.ClearChildren(ctx)
-		templ_7745c5c3_Err = templ.WriteWatchModeString(templ_7745c5c3_Buffer, 1)
+		_, templ_7745c5c3_Err = templ_7745c5c3_Buffer.WriteString("<div class=\"container\"><small>Copyright &copy; Waseisyouji Co., Ltd. All rights reserved.</small></div><style type=\"text/css\">\n\t\t#footer {\n\t\t\tbackground-color: #f0f0f0;\n\t\t}\n\t\t#footer .container {\n\t\t\tpadding: 1rem 0;\n\t\t\ttext-align: center;\n\t\t}\n\t</style>")
 		if templ_7745c5c3_Err != nil {
 			return templ_7745c5c3_Err
 		}

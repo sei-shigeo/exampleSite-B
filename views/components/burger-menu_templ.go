@@ -29,17 +29,17 @@ func BurgerMenu() templ.Component {
 			templ_7745c5c3_Var1 = templ.NopComponent
 		}
 		ctx = templ.ClearChildren(ctx)
-		templ_7745c5c3_Err = templ.WriteWatchModeString(templ_7745c5c3_Buffer, 1)
+		_, templ_7745c5c3_Err = templ_7745c5c3_Buffer.WriteString("<button class=\"burger-menu\" onclick=\"toggleMenu(this)\" aria-controls=\"mobile-navigation\" aria-expanded=\"false\">")
 		if templ_7745c5c3_Err != nil {
 			return templ_7745c5c3_Err
 		}
 		for range 3 {
-			templ_7745c5c3_Err = templ.WriteWatchModeString(templ_7745c5c3_Buffer, 2)
+			_, templ_7745c5c3_Err = templ_7745c5c3_Buffer.WriteString("<span class=\"burger-menu-line\"></span>")
 			if templ_7745c5c3_Err != nil {
 				return templ_7745c5c3_Err
 			}
 		}
-		templ_7745c5c3_Err = templ.WriteWatchModeString(templ_7745c5c3_Buffer, 3)
+		_, templ_7745c5c3_Err = templ_7745c5c3_Buffer.WriteString("</button><style type=\"text/css\">\n    .burger-menu {\n      display: grid;\n      place-items: center;\n      grid-template-rows: repeat(3, 1fr);\n      width: 40px;\n      aspect-ratio: 4/3;\n      /* line */\n      & .burger-menu-line {\n        display: block;\n        width: 100%;\n        height: 3px;\n        background-color: var(--black);\n        transition: all 0.5s ease;\n      }\n      /* Animation when active */\n      &.is-active {\n        & span:nth-child(1) {\n          rotate: -45deg;\n          translate: 0 10px;\n        }\n        & .burger-menu-line:nth-child(2) {\n          opacity: 0;\n        }\n        & .burger-menu-line:nth-child(3) {\n          rotate: 45deg;\n          translate: 0 -10px;\n        }\n      }\n    }\n  </style><script type=\"text/javascript\">\n    function toggleMenu(e) {\n      const burgerMenuContainer = document.querySelector('.burger-menu-container');\n      const mobileNav = document.getElementById('mobile-navigation');\n      mobileNav.classList.toggle('open');\n      e.classList.toggle('is-active');\n\n      if (e.classList.contains('is-active')) {\n        e.setAttribute('aria-expanded', 'true');\n        // ボタンのテキストを変更\n        burgerMenuContainer.setAttribute('data-burger-menu-name', 'Close');\n        // ボディのスクロールを固定\n        document.body.style.overflow = 'hidden';\n      } else {\n        e.setAttribute('aria-expanded', 'false');\n        // ボタンのテキストを変更\n        burgerMenuContainer.setAttribute('data-burger-menu-name', 'Menu');\n        // ボディのスクロールを解除\n        document.body.style.overflow = 'auto';\n      }\n    }\n  </script>")
 		if templ_7745c5c3_Err != nil {
 			return templ_7745c5c3_Err
 		}

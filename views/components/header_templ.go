@@ -31,7 +31,7 @@ func Header() templ.Component {
 			templ_7745c5c3_Var1 = templ.NopComponent
 		}
 		ctx = templ.ClearChildren(ctx)
-		templ_7745c5c3_Err = templ.WriteWatchModeString(templ_7745c5c3_Buffer, 1)
+		_, templ_7745c5c3_Err = templ_7745c5c3_Buffer.WriteString("<div class=\"container\"><div class=\"header-logo\"><a href=\"/\" title=\"Go to homepage\">")
 		if templ_7745c5c3_Err != nil {
 			return templ_7745c5c3_Err
 		}
@@ -39,7 +39,7 @@ func Header() templ.Component {
 		if templ_7745c5c3_Err != nil {
 			return templ_7745c5c3_Err
 		}
-		templ_7745c5c3_Err = templ.WriteWatchModeString(templ_7745c5c3_Buffer, 2)
+		_, templ_7745c5c3_Err = templ_7745c5c3_Buffer.WriteString("</a></div><nav class=\"header-nav\"><ul class=\"header-nav-list\"><li class=\"header-nav-item\"><a href=\"/\">Home</a></li><li class=\"header-nav-item\"><a href=\"/about\">About</a></li><li class=\"header-nav-item\"><a href=\"/contact\">Contact</a></li><li class=\"header-nav-item\"><a href=\"/qa\">Q&A</a></li></ul><style type=\"text/css\">\n\t\t\t\t& .header-nav {\n\t\t\t\t\tdisplay: none;\n\t\t\t\t\t& .header-nav-list {\n\t\t\t\t\t\tdisplay: flex;\n\t\t\t\t\t\tjustify-content: space-between;\n\t\t\t\t\t\talign-items: center;\n\t\t\t\t\t\tgap: 1rem;\n\t\t\t\t\t\t& a:hover {\n\t\t\t\t\t\t\tcolor: red;\n\t\t\t\t\t\t}\n\t\t\t\t\t}\n\t\t\t\t}\n\t\t\t</style></nav><!-- モバイル用ナビゲーション ボタン --><div class=\"burger-menu-container\" data-burger-menu-name=\"Menu\">")
 		if templ_7745c5c3_Err != nil {
 			return templ_7745c5c3_Err
 		}
@@ -47,7 +47,7 @@ func Header() templ.Component {
 		if templ_7745c5c3_Err != nil {
 			return templ_7745c5c3_Err
 		}
-		templ_7745c5c3_Err = templ.WriteWatchModeString(templ_7745c5c3_Buffer, 3)
+		_, templ_7745c5c3_Err = templ_7745c5c3_Buffer.WriteString("<style>\n\t\t\t\t#header .burger-menu-container {\n\t\t\t\t\tmin-width: 45px;\n\t\t\t\t\tdisplay: grid;\n\t\t\t\t\tplace-items: center;\n\t\t\t\t\ttext-wrap: nowrap;\n\t\t\t\t\tz-index: 1000;\n\t\t\t\t\t&::after {\n\t\t\t\t\t\tcontent: attr(data-burger-menu-name);\n\t\t\t\t\t\tdisplay: block;\n\t\t\t\t\t\tfont-size: 1rem;\n\t\t\t\t\t\tcolor: var(--black);\n\t\t\t\t\t}\n\t\t\t\t}\n\t\t\t</style></div><!-- モバイル用ナビゲーション --><nav id=\"mobile-navigation\" class=\"\"><ul class=\"nav-list\"><li class=\"nav-item\"><a href=\"/\" data-nav-item=\"Home\"></a></li><li class=\"nav-item\"><a href=\"/about\" data-nav-item=\"About\"></a></li><li class=\"nav-item\"><a href=\"/contact\" data-nav-item=\"Contact\"></a></li><li class=\"nav-item\"><a href=\"/qa\" data-nav-item=\"Q&amp;A\"></a></li><li class=\"nav-item\"><a href=\"/signup\" data-nav-item=\"Signup\"></a></li><li class=\"nav-item\"><a href=\"/login\" data-nav-item=\"Login\"></a></li></ul><style type=\"text/css\">\n\t\t\t\t#mobile-navigation {\n\t\t\t\t\tdisplay: block;\n\t\t\t\t\tposition: absolute;\n\t\t\t\t\ttop: -100%;\n\t\t\t\t\tleft: 0;\n\t\t\t\t\twidth: 100%;\n\t\t\t\t\theight: 100%;\n\t\t\t\t\tbackground-color: hsla(0, 100%, 50%, .5);\n\t\t\t\t\ttransition: all 0.5s ease;\n\t\t\t\t\t&.open {\n\t\t\t\t\t\ttop: 0;\n\t\t\t\t\t}\n\t\t\t\t\t& .nav-list {\n\t\t\t\t\t\tdisplay: grid;\n\t\t\t\t\t\tgap: 1rem;\n\t\t\t\t\t\tmargin-top: 80px;\n\t\t\t\t\t\t& a {\n\t\t\t\t\t\t\tdisplay: flex;\n\t\t\t\t\t\t\tjustify-content: space-between;\n\t\t\t\t\t\t\talign-items: center;\n\t\t\t\t\t\t\twidth: 100%;\n\t\t\t\t\t\t\tpadding: 1rem;\n\t\t\t\t\t\t\tcolor: var(--white);\n\t\t\t\t\t\t\tbackground-color: var(--black);\n\t\t\t\t\t\t\t&::before {\n\t\t\t\t\t\t\t\tcontent: attr(data-nav-item);\n\t\t\t\t\t\t\t}\n\t\t\t\t\t\t\t&::after {\n\t\t\t\t\t\t\t\tcontent: \"\";\n\t\t\t\t\t\t\t\tbackground-color: var(--white);\n\t\t\t\t\t\t\t\theight: 10px;\n\t\t\t\t\t\t\t\twidth: 10px;\n\t\t\t\t\t\t\t\tborder-radius: 50%;\n\t\t\t\t\t\t\t}\n\t\t\t\t\t\t}\n\t\t\t\t\t}\n\t\t\t\t}\n\t\t\t</style></nav></div><style>\n\t\t#header {\n\t\t\t& .container {\n\t\t\t\tdisplay: flex;\n\t\t\t\tjustify-content: space-between;\n\t\t\t\talign-items: center;\n\t\t\t\theight: 100%;\n\t\t\t\t/* ロゴ */\n\t\t\t\t& .header-logo {\n\t\t\t\t\tdisplay: flex;\n\t\t\t\t\tjustify-content: center;\n\t\t\t\t\talign-items: center;\n\t\t\t\t\t& a {\n\t\t\t\t\t\t& svg {\n\t\t\t\t\t\t\twidth: 64px;\n\t\t\t\t\t\t\theight: auto;\n\t\t\t\t\t\t}\n\t\t\t\t\t}\n\t\t\t\t}\n\t\t\t}\n\t\t}\n\t</style>")
 		if templ_7745c5c3_Err != nil {
 			return templ_7745c5c3_Err
 		}
