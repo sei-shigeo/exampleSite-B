@@ -1,14 +1,27 @@
 package components
 
-import "github.com/sei-shigeo/docker-go-myapp/views/svg"
-
 templ Header() {
 	<div class="container">
+		<!-- ロゴ -->
 		<div class="header-logo">
 			<a href="/" title="Go to homepage">
-				@svg.LogoSvg()
+				<img src="/assets/images/logo.png" alt="Logo"/>
 			</a>
+			<style type="text/css">
+				& #header .header-logo {
+					display: flex;
+					justify-content: center;
+					align-items: center;
+					& a {
+						& img {
+							width: 64px;
+							height: auto;
+						}
+					}
+				}
+			</style>
 		</div>
+		<!-- ナビゲーション -->
 		<nav class="header-nav">
 			<ul class="header-nav-list">
 				<li class="header-nav-item"><a href="/">Home</a></li>
@@ -36,6 +49,9 @@ templ Header() {
 			@BurgerMenu()
 			<style>
 				#header .burger-menu-container {
+					position: fixed;
+					top: 16px;
+					right: 16px;
 					min-width: 45px;
 					display: grid;
 					place-items: center;
@@ -47,44 +63,55 @@ templ Header() {
 						font-size: 1rem;
 						color: var(--black);
 					}
+					&:has(.is-active) {
+						&::after {
+							color: var(--white);
+						}
+						& .burger-menu-line {
+							background-color: var(--white);
+						}
+					}
 				}
 			</style>
 		</div>
 		<!-- モバイル用ナビゲーション -->
 		<nav id="mobile-navigation" class="">
 			<ul class="nav-list">
-				<li class="nav-item"><a href="/" data-nav-item="Home"></a></li>
-				<li class="nav-item"><a href="/about" data-nav-item="About"></a></li>
-				<li class="nav-item"><a href="/contact" data-nav-item="Contact"></a></li>
-				<li class="nav-item"><a href="/qa" data-nav-item="Q&A"></a></li>
-				<li class="nav-item"><a href="/signup" data-nav-item="Signup"></a></li>
-				<li class="nav-item"><a href="/login" data-nav-item="Login"></a></li>
+				<li class="nav-item"><a class="nav-link" href="/" data-nav-item="Home"></a></li>
+				<li class="nav-item"><a class="nav-link" href="/about" data-nav-item="About"></a></li>
+				<li class="nav-item"><a class="nav-link" href="/contact" data-nav-item="Contact"></a></li>
+				<li class="nav-item"><a class="nav-link" href="/qa" data-nav-item="Q&A"></a></li>
+				<li class="nav-item"><a class="nav-link" href="/signup" data-nav-item="Signup"></a></li>
+				<li class="nav-item"><a class="nav-link" href="/login" data-nav-item="Login"></a></li>
 			</ul>
 			<style type="text/css">
 				#mobile-navigation {
 					display: block;
-					position: absolute;
-					top: -100%;
-					left: 0;
+					position: fixed;
+					top: 0;
+					left: -100%;
 					width: 100%;
 					height: 100%;
-					background-color: hsla(0, 100%, 50%, .5);
+					background-color: hsl(from var(--primary-6) h s l / 80%);
 					transition: all 0.5s ease;
+					backdrop-filter: blur(10px);
 					&.open {
-						top: 0;
+						left: 0;
 					}
 					& .nav-list {
 						display: grid;
-						gap: 1rem;
 						margin-top: 80px;
-						& a {
+						& .nav-link {
 							display: flex;
 							justify-content: space-between;
 							align-items: center;
 							width: 100%;
 							padding: 1rem;
 							color: var(--white);
-							background-color: var(--black);
+							border-bottom: 1px solid var(--white);
+							&:hover {
+								background-color: hsl(from var(--primary-2) h s l / 50%);
+							}
 							&::before {
 								content: attr(data-nav-item);
 							}
@@ -94,6 +121,9 @@ templ Header() {
 								height: 10px;
 								width: 10px;
 								border-radius: 50%;
+							}
+							&.active::after {
+								background-color: var(--primary-2);
 							}
 						}
 					}
@@ -108,18 +138,6 @@ templ Header() {
 				justify-content: space-between;
 				align-items: center;
 				height: 100%;
-				/* ロゴ */
-				& .header-logo {
-					display: flex;
-					justify-content: center;
-					align-items: center;
-					& a {
-						& svg {
-							width: 64px;
-							height: auto;
-						}
-					}
-				}
 			}
 		}
 	</style>

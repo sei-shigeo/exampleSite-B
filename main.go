@@ -7,15 +7,35 @@ import (
 	"github.com/sei-shigeo/docker-go-myapp/views"
 )
 
-func greet(w http.ResponseWriter, r *http.Request) {
+func Home(w http.ResponseWriter, r *http.Request) {
 	views.Home().Render(r.Context(), w)
+}
+
+func About(w http.ResponseWriter, r *http.Request) {
+	views.About().Render(r.Context(), w)
+}
+
+func Contact(w http.ResponseWriter, r *http.Request) {
+	views.Contact().Render(r.Context(), w)
+}
+
+func Signup(w http.ResponseWriter, r *http.Request) {
+	views.Signup().Render(r.Context(), w)
+}
+
+func Login(w http.ResponseWriter, r *http.Request) {
+	views.Login().Render(r.Context(), w)
 }
 
 func main() {
 	mux := http.NewServeMux()
 	mux.Handle("/assets/", http.StripPrefix("/assets/", http.FileServer(http.Dir("./assets"))))
 
-	mux.HandleFunc("/", greet)
+	mux.HandleFunc("/", Home)
+	mux.HandleFunc("/about", About)
+	mux.HandleFunc("/contact", Contact)
+	mux.HandleFunc("/signup", Signup)
+	mux.HandleFunc("/login", Login)
 
 	server := &http.Server{
 		Addr:    ":8080",

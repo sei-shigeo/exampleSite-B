@@ -2,15 +2,21 @@
 @import url('https://fonts.googleapis.com/css2?family=Noto+Serif:ital,wght@0,100..900;1,100..900&display=swap');
 :root {
   /* カラー */
-  --black: hsl(0, 0%, 0%);
-  --white: hsl(0, 0%, 100%);
+  --black: hsl(28, 26%, 11%);
+  --white: hsl(47, 32%, 88%);
   --gray: hsl(0, 0%, 50%);
   --light-gray: hsl(0, 0%, 90%);
   --dark-gray: hsl(0, 0%, 30%);
   /* パレット カラー */
-  --primary: hsl(200, 100%, 50%);
-  --secondary: hsl(0, 0%, 90%);
-  --accent: hsl(30, 100%, 50%);
+  --primary-1: hsl(44, 31%, 36%);
+  --primary-2: hsl(49, 61%, 51%);
+  --primary-3: hsl(47, 32%, 88%);
+  --primary-4: hsl(52, 48%, 68%);
+  --primary-5: hsl(28, 26%, 11%);
+  --primary-6: hsl(30, 27%, 24%);
+
+  --bg-color: var(--primary-3);
+  --text-color: var(--black);
 }
 
 /* ---- reset start ---- */
@@ -43,8 +49,6 @@ body {
 }
 
 .container {
-  max-width: 1200px;
-  margin: 0 auto;
   padding: 0 1rem;
 }
 

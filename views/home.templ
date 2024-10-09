@@ -4,42 +4,65 @@ import "github.com/sei-shigeo/docker-go-myapp/views/layouts"
 
 templ Home() {
 	@layouts.Base() {
-		<div class="home-page">
+		<div class="top-page">
+			<section id="home">
+				<div class="container">
+					<div class="content">
+						<h1>Home</h1>
+						<p>
+							Lorem ipsum dolor sit amet consectetur adipisicing elit. 
+							Qui quidem praesentium quis perspiciatis nisi voluptatem optio 
+							voluptatibus quia possimus cupiditate eveniet assumenda nam modi, 
+							ipsam asperiores. Ex nostrum molestiae temporibus?
+						</p>
+					</div>
+				</div>
+			</section>
 			<section id="about">
-				<h1>About</h1>
-				<p>
-					Lorem ipsum dolor sit amet consectetur adipisicing elit. 
-					Qui quidem praesentium quis perspiciatis nisi voluptatem optio 
-					voluptatibus quia possimus cupiditate eveniet assumenda nam modi, 
-					ipsam asperiores. Ex nostrum molestiae temporibus?
-				</p>
+				<div class="container">
+					<div class="content">
+						<h1>About</h1>
+						<p>
+							Lorem ipsum dolor sit amet consectetur adipisicing elit. 
+							Qui quidem praesentium quis perspiciatis nisi voluptatem optio 
+							voluptatibus quia possimus cupiditate eveniet assumenda nam modi, 
+							ipsam asperiores. Ex nostrum molestiae temporibus?
+						</p>
+					</div>
+				</div>
 			</section>
 			<section id="contact">
-				<h1>Contact</h1>
-				<p>
-					Lorem ipsum dolor sit amet consectetur adipisicing elit. 
-					Qui quidem praesentium quis perspiciatis nisi voluptatem optio 
-					voluptatibus quia possimus cupiditate eveniet assumenda nam modi, 
-					ipsam asperiores. Ex nostrum molestiae temporibus?
-				</p>
+				<div class="container">
+					<div class="content">
+						<h1>Contact</h1>
+						<p>
+							Lorem ipsum dolor sit amet consectetur adipisicing elit. 
+							Qui quidem praesentium quis perspiciatis nisi voluptatem optio 
+							voluptatibus quia possimus cupiditate eveniet assumenda nam modi, 
+							ipsam asperiores. Ex nostrum molestiae temporibus?
+						</p>
+					</div>
+				</div>
 			</section>
 			<section id="qa">
-				<h1>Q&A</h1>
-				<p>
-					Lorem ipsum dolor sit amet consectetur adipisicing elit. 
-					Qui quidem praesentium quis perspiciatis nisi voluptatem optio 
-					voluptatibus quia possimus cupiditate eveniet assumenda nam modi, 
-					ipsam asperiores. Ex nostrum molestiae temporibus?
-				</p>
+				<div class="container">
+					<div class="content">
+						<h1>Q&A</h1>
+						<p>
+							Lorem ipsum dolor sit amet consectetur adipisicing elit. 
+							Qui quidem praesentium quis perspiciatis nisi voluptatem optio 
+							voluptatibus quia possimus cupiditate eveniet assumenda nam modi, 
+							ipsam asperiores. Ex nostrum molestiae temporibus?
+						</p>
+					</div>
+				</div>
 			</section>
 		</div>
 		<style type="text/css">
 			#main {
-				.home-page {
-					section {
-						height: 100vh;
-						margin-bottom: 20px;
-					}
+				.top-page {
+					display: grid;
+					gap: 1rem;
 				}
 			}
 		</style>
