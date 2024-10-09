@@ -8,6 +8,8 @@ package components
 import "github.com/a-h/templ"
 import templruntime "github.com/a-h/templ/runtime"
 
+import "github.com/sei-shigeo/docker-go-myapp/views/svg"
+
 func Header() templ.Component {
 	return templruntime.GeneratedTemplate(func(templ_7745c5c3_Input templruntime.GeneratedComponentInput) (templ_7745c5c3_Err error) {
 		templ_7745c5c3_W, ctx := templ_7745c5c3_Input.Writer, templ_7745c5c3_Input.Context
@@ -29,7 +31,23 @@ func Header() templ.Component {
 			templ_7745c5c3_Var1 = templ.NopComponent
 		}
 		ctx = templ.ClearChildren(ctx)
-		_, templ_7745c5c3_Err = templ_7745c5c3_Buffer.WriteString("<div class=\"container\"><div class=\"header-logo\"><h1><a href=\"/\" title=\"Go to homepage\">Waseisyouji Co., Ltd.</a></h1></div><nav class=\"header-nav\"><ul class=\"header-nav-list\"><li class=\"header-nav-item\"><a href=\"/\">Home</a></li><li class=\"header-nav-item\"><a href=\"/about\">About</a></li><li class=\"header-nav-item\"><a href=\"/contact\">Contact</a></li><li class=\"header-nav-item\"><a href=\"/qa\">Q&A</a></li></ul></nav></div><style>\n\t\t#header {\n\t\t\tbackground-color: hsla(0, 0%, 100%, 1);\n\t\t\tbox-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.1);\n\t\t}\n\t\t#header .container {\n\t\t\tdisplay: flex;\n\t\t\tjustify-content: space-between;\n\t\t\talign-items: center;\n\t\t\theight: 80px;\n\t\t}\n\t\t#header .header-logo {\n\t\t\t& h1 {\n\t\t\t\tfont-size: 1.5rem;\n\t\t\t}\n\t\t}\n\t\t#header .header-nav {\n\t\t\tdisplay: none;\n\t\t}\n\t\t#header .header-nav-list {\n\t\t\tdisplay: flex;\n\t\t\tjustify-content: space-between;\n\t\t\talign-items: center;\n\t\t\tgap: 1rem;\n\t\t\t& a:hover {\n\t\t\t\tcolor: red;\n\t\t\t}\n\t\t}\n\t</style>")
+		templ_7745c5c3_Err = templ.WriteWatchModeString(templ_7745c5c3_Buffer, 1)
+		if templ_7745c5c3_Err != nil {
+			return templ_7745c5c3_Err
+		}
+		templ_7745c5c3_Err = svg.LogoSvg().Render(ctx, templ_7745c5c3_Buffer)
+		if templ_7745c5c3_Err != nil {
+			return templ_7745c5c3_Err
+		}
+		templ_7745c5c3_Err = templ.WriteWatchModeString(templ_7745c5c3_Buffer, 2)
+		if templ_7745c5c3_Err != nil {
+			return templ_7745c5c3_Err
+		}
+		templ_7745c5c3_Err = BurgerMenu().Render(ctx, templ_7745c5c3_Buffer)
+		if templ_7745c5c3_Err != nil {
+			return templ_7745c5c3_Err
+		}
+		templ_7745c5c3_Err = templ.WriteWatchModeString(templ_7745c5c3_Buffer, 3)
 		if templ_7745c5c3_Err != nil {
 			return templ_7745c5c3_Err
 		}

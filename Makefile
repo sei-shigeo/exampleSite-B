@@ -1,9 +1,6 @@
 
 .PHONY: up down build ps
 
-prod:
-	docker-compose -f docker-compose.yml -f docker-compose.prod.yml up -d --build $(A)
-
 up:
 	docker-compose up -d --build $(A)
 
