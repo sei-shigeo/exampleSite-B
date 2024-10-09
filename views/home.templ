@@ -4,8 +4,8 @@ import "github.com/sei-shigeo/docker-go-myapp/views/layouts"
 
 templ Home() {
 	@layouts.Base() {
-		<div>
-			<section>
+		<div class="home-page">
+			<section id="about">
 				<h1>About</h1>
 				<p>
 					Lorem ipsum dolor sit amet consectetur adipisicing elit. 
@@ -14,7 +14,7 @@ templ Home() {
 					ipsam asperiores. Ex nostrum molestiae temporibus?
 				</p>
 			</section>
-			<section>
+			<section id="contact">
 				<h1>Contact</h1>
 				<p>
 					Lorem ipsum dolor sit amet consectetur adipisicing elit. 
@@ -23,7 +23,7 @@ templ Home() {
 					ipsam asperiores. Ex nostrum molestiae temporibus?
 				</p>
 			</section>
-			<section>
+			<section id="qa">
 				<h1>Q&A</h1>
 				<p>
 					Lorem ipsum dolor sit amet consectetur adipisicing elit. 
@@ -33,5 +33,15 @@ templ Home() {
 				</p>
 			</section>
 		</div>
+		<style type="text/css">
+			#main {
+				.home-page {
+					section {
+						height: 100vh;
+						margin-bottom: 20px;
+					}
+				}
+			}
+		</style>
 	}
 }

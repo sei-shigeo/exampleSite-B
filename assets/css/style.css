@@ -1,3 +1,19 @@
+@import url('https://fonts.googleapis.com/css2?family=Noto+Serif+JP:wght@200..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Noto+Serif:ital,wght@0,100..900;1,100..900&display=swap');
+:root {
+  /* カラー */
+  --black: hsl(0, 0%, 0%);
+  --white: hsl(0, 0%, 100%);
+  --gray: hsl(0, 0%, 50%);
+  --light-gray: hsl(0, 0%, 90%);
+  --dark-gray: hsl(0, 0%, 30%);
+  /* パレット カラー */
+  --primary: hsl(200, 100%, 50%);
+  --secondary: hsl(0, 0%, 90%);
+  --accent: hsl(30, 100%, 50%);
+}
+
+/* ---- reset start ---- */
 * {
   margin: 0;
   padding: 0;
@@ -11,11 +27,20 @@ a {
 ul {
   list-style: none;
 }
+button {
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+}
+/* ---- reset end ---- */
 
 html {
   scroll-behavior: smooth;
 }
 
+body {
+  font-family: 'Noto Serif','Noto Serif JP', serif;
+}
 
 .container {
   max-width: 1200px;
@@ -23,3 +48,7 @@ html {
   padding: 0 1rem;
 }
 
+.material-symbols-outlined {
+  font-size: 54px;
+  font-weight: 300;
+}

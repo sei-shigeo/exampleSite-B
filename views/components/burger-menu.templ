@@ -1,0 +1,62 @@
+package components
+
+templ BurgerMenu() {
+	<button class="burger-menu" onclick="toggleMenu(this)" aria-controls="mobile-navigation" aria-expanded="false">
+		for range(3) {
+			<span class="burger-menu-line"></span>
+		}
+	</button>
+	<style type="text/css">
+    .burger-menu {
+      display: grid;
+      place-items: center;
+      grid-template-rows: repeat(3, 1fr);
+      width: 40px;
+      aspect-ratio: 4/3;
+      /* line */
+      & .burger-menu-line {
+        display: block;
+        width: 100%;
+        height: 3px;
+        background-color: var(--black);
+        transition: all 0.5s ease;
+      }
+      /* Animation when active */
+      &.is-active {
+        & span:nth-child(1) {
+          rotate: -45deg;
+          translate: 0 10px;
+        }
+        & .burger-menu-line:nth-child(2) {
+          opacity: 0;
+        }
+        & .burger-menu-line:nth-child(3) {
+          rotate: 45deg;
+          translate: 0 -10px;
+        }
+      }
+    }
+  </style>
+	<script type="text/javascript">
+    function toggleMenu(e) {
+      const burgerMenuContainer = document.querySelector('.burger-menu-container');
+      const mobileNav = document.getElementById('mobile-navigation');
+      mobileNav.classList.toggle('open');
+      e.classList.toggle('is-active');
+
+      if (e.classList.contains('is-active')) {
+        e.setAttribute('aria-expanded', 'true');
+        // ボタンのテキストを変更
+        burgerMenuContainer.setAttribute('data-burger-menu-name', 'Close');
+        // ボディのスクロールを固定
+        document.body.style.overflow = 'hidden';
+      } else {
+        e.setAttribute('aria-expanded', 'false');
+        // ボタンのテキストを変更
+        burgerMenuContainer.setAttribute('data-burger-menu-name', 'Menu');
+        // ボディのスクロールを解除
+        document.body.style.overflow = 'auto';
+      }
+    }
+  </script>
+}
