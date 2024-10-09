@@ -43,7 +43,7 @@ func Home() templ.Component {
 				}()
 			}
 			ctx = templ.InitializeContext(ctx)
-			templ_7745c5c3_Err = templ.WriteWatchModeString(templ_7745c5c3_Buffer, 1)
+			_, templ_7745c5c3_Err = templ_7745c5c3_Buffer.WriteString("<div class=\"home-page\"><section id=\"about\"><h1>About</h1><p>Lorem ipsum dolor sit amet consectetur adipisicing elit.  Qui quidem praesentium quis perspiciatis nisi voluptatem optio  voluptatibus quia possimus cupiditate eveniet assumenda nam modi,  ipsam asperiores. Ex nostrum molestiae temporibus?</p></section><section id=\"contact\"><h1>Contact</h1><p>Lorem ipsum dolor sit amet consectetur adipisicing elit.  Qui quidem praesentium quis perspiciatis nisi voluptatem optio  voluptatibus quia possimus cupiditate eveniet assumenda nam modi,  ipsam asperiores. Ex nostrum molestiae temporibus?</p></section><section id=\"qa\"><h1>Q&A</h1><p>Lorem ipsum dolor sit amet consectetur adipisicing elit.  Qui quidem praesentium quis perspiciatis nisi voluptatem optio  voluptatibus quia possimus cupiditate eveniet assumenda nam modi,  ipsam asperiores. Ex nostrum molestiae temporibus?</p></section></div><style type=\"text/css\">\n\t\t\t#main {\n\t\t\t\t.home-page {\n\t\t\t\t\tsection {\n\t\t\t\t\t\theight: 100vh;\n\t\t\t\t\t\tmargin-bottom: 20px;\n\t\t\t\t\t}\n\t\t\t\t}\n\t\t\t}\n\t\t</style>")
 			if templ_7745c5c3_Err != nil {
 				return templ_7745c5c3_Err
 			}
